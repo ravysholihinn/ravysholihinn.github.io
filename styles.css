@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Styling untuk gambar logo di navbar */
@@ -19,18 +20,11 @@ ul {
   padding: 0;
 }
 
-ul li {
-  margin-bottom: 0.5rem;
-}
 .profile-img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
   border: 3px solid #007bff;
-}
-
-.btn-primary {
-  margin-top: 10px; /* Spasi antara gambar dan tombol */
 }
 ul li strong {
   color: #007bff;
@@ -45,11 +39,35 @@ ul li strong {
   border: 3px solid #007bff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/* profile tentang saya  */
+.profile-img-about {
+  display: block; /* Ensure the image is a block-level element */
+  max-width: 150px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image round */
+  margin: 0 auto; /* Center the image horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  margin-bottom: 1rem;
+}
+.profile-details {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.profile-details-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* Navbar Styling */
 header {
   background: linear-gradient(135deg, #003366, #0099cc); /* Gradien biru laut ke biru muda */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
+
 
 .navbar {
   padding: 0.5rem 1rem;
@@ -67,6 +85,7 @@ header {
 
 .navbar-nav .nav-link:hover {
   background-color: hsla(0, 0%, 56%, 0.925); /* Efek hover biru gelap */
+
   border-radius: 0.25rem;
 }
 
@@ -95,32 +114,32 @@ header {
   max-width: 100%;
   height: auto;
 }
-   /* Style untuk tombol melayang */
-   .floating-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-  }
-  .floating-btn a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25D366; /* Warna hijau WhatsApp */
-    color: white;
-    padding: 10px 15px;
-    border-radius: 50px;
-    font-size: 16px;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-  }
-  .floating-btn a:hover {
-    background-color: #128C7E; /* Warna hijau WhatsApp gelap saat hover */
-  }
-  .floating-btn i {
-    margin-right: 8px; /* Jarak antara ikon dan teks */
-  }
+/* Style untuk tombol melayang */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.floating-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366; /* Warna hijau WhatsApp */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+.floating-btn a:hover {
+  background-color: #128C7E; /* Warna hijau WhatsApp gelap saat hover */
+}
+.floating-btn i {
+  margin-right: 8px; /* Jarak antara ikon dan teks */
+}
 footer {
   background: linear-gradient(135deg, #003366, #0099cc);
   color: #ffffff; /* White text color */
@@ -160,3 +179,4 @@ footer .list-unstyled a:hover {
     padding: 0.5rem;
   }
 }
+
