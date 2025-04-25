@@ -72,43 +72,63 @@ strong {
     box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
 }
 
+
 /* Header and Navbar */
 header {
-    background: #f8f9fa; /* Light background for the header */
-    border-bottom: 1px solid #dee2e6; /* Subtle border */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .navbar {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid #e9ecef;
-}
-
-.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 1.5rem;
+    flex-wrap: wrap;
 }
 
 .navbar-brand {
     color: #343a40;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 700;
     transition: color 0.2s ease;
 }
+
 
 .navbar-brand:hover {
     color: #007bff;
 }
 
-.navbar-nav .nav-link {
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #343a40;
+    display: block;
+    margin: 5px 0;
+    transition: background-color 0.2s ease;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-link {
     color: #495057;
     padding: 0.75rem 1.5rem;
     transition: color 0.2s ease;
-    font-size: 1rem;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #007bff;
 }
 
 /* Container */
@@ -228,24 +248,53 @@ footer {
 }
 
 /* Media Queries for Responsiveness */
-
-/* Mobile */
 @media (max-width: 576px) {
     .profile-img {
         width: 150px;
         height: 150px;
     }
 
+    .footer-links a {
+        font-size: 1.5rem;
+    }
+
     .navbar-nav {
+        flex-direction: column;
+        width: 100%;
         text-align: center;
+        display: none;
+    }
+
+    .navbar-nav.active {
+        display: flex;
     }
 
     .navbar-brand {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+    }
+
+    .navbar-toggler-icon {
+        width: 22px;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .logo {
+        height: 30px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.7rem;
     }
 
     .footer-links a {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -253,8 +302,11 @@ footer {
 @media (min-width: 577px) and (max-width: 992px) {
     .navbar-brand {
         font-size: 1.75rem;
-    }
+     }
+
     .footer-links a {
         font-size: 1.7rem;
-    }
+     }
 }
+
+
