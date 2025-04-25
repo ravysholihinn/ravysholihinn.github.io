@@ -1,48 +1,30 @@
-/* Reset beberapa gaya bawaan browser */
+/* General Reset and Styling */
 * {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* Styling untuk gambar logo di navbar */
-.logo {
-  height: 10px; /* Atur tinggi gambar sesuai kebutuhan */
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* Keterampilan Styling */
+/* General List Styling */
 ul {
   list-style-type: none;
   padding: 0;
 }
-
 ul li {
   margin-bottom: 0.5rem;
 }
-.profile-img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  border: 3px solid #007bff;
-}
 
-.btn-primary {
-  margin-top: 10px; /* Spasi antara gambar dan tombol */
-}
 ul li strong {
   color: #007bff;
 }
 
-/* Profil Gambar dan Informasi */
+/* Profile Image Styling */
 .profile-img {
   border-radius: 50%;
   width: 120px;
-  height: 120px;
-  margin-right: 20px;
+  height: 60px; /* Reduced size */
+  margin-left: 10px; /* Adjusted margin */
   border: 3px solid #007bff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -50,17 +32,37 @@ ul li strong {
 /* Navbar Styling */
 header {
   background: linear-gradient(135deg, #003366, #0099cc);
-  position: sticky;
+  position: fixed; /* Changed to fixed */
   top: 0;
-  z-index: 100;
+  width: 100%;
+  z-index: 1000; /* Increased z-index */
 }
 
 .navbar {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem; /* Increased padding */
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center; /* Centered content */
+  flex-wrap: wrap; /* Added wrap for responsiveness */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem; /* Adjusted size */
+  color: white;
+  text-decoration: none;
+}
+
+.portfolio-text {
+  font-weight: bold;
+  display: block;
+  line-height: 1;
+}
+
+.name-text {
+  display: block;
+  line-height: 1;
 }
 
 .nav-links {
@@ -71,7 +73,7 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   font-size: 1.1rem; /* Increased font size for better visibility */
   padding: 0.5rem 1rem;
   font-weight: 500;
@@ -83,16 +85,10 @@ header {
   border-radius: 0.25rem;
 }
 
-.navbar-brand {
-  font-size: 2rem;
-}
-.navbar-nav .nav-link {
-  color: #fff; /* Warna teks putih untuk link */
-  padding: 0.5rem 1rem;
-}
-.navbar-nav{
-  margin-left: auto;
-}
+
+
+
+
 .navbar-nav .nav-link:hover {
   background-color: hsla(0, 0%, 56%, 0.925); /* Efek hover biru gelap */
   border-radius: 0.25rem;
@@ -127,6 +123,7 @@ header {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  bottom: 20px;
   z-index: 1000;
 }
 
@@ -153,6 +150,7 @@ header {
 }
 
 footer {
+  margin-top: 10px;
   background: linear-gradient(135deg, #003366, #0099cc);
   color: #ffffff;
   padding: 2rem 0;
@@ -191,24 +189,39 @@ footer .list-unstyled a:hover {
 /* Responsif untuk tampilan mobile */
 @media (max-width: 767.98px) {
   .navbar {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
   .navbar-brand {
     margin-bottom: 10px;
   }
+
   .nav-links {
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-      
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
   }
-  .navbar-nav{margin-left: 0px; }
 
-    .nav-links a {
-        padding: 0.5rem 0;
-        width: 100%;
-        display: block;
+  .navbar-nav {
+    margin-left: 0px;
   }
-}
 
+  .nav-links a {
+    padding: 0.5rem 0;
+    width: 100%;
+    display: block;
+  }
+
+    .navbar-brand {
+      display: flex;
+      flex-direction: column; /* Stack text and image */
+      align-items: center; /* Center items */
+      text-align: center; /* Center text */
+    }
+  
+    .profile-img {
+      margin-left: 0; /* Remove margin on mobile */
+      margin-top: 5px; /* Add some top margin */
+    }
+  }
