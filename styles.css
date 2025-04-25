@@ -1,0 +1,162 @@
+/* Reset beberapa gaya bawaan browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling untuk gambar logo di navbar */
+.logo {
+  height: 10px; /* Atur tinggi gambar sesuai kebutuhan */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Keterampilan Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+.profile-img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 3px solid #007bff;
+}
+
+.btn-primary {
+  margin-top: 10px; /* Spasi antara gambar dan tombol */
+}
+ul li strong {
+  color: #007bff;
+}
+
+/* Profil Gambar dan Informasi */
+.profile-img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  border: 3px solid #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Styling */
+header {
+  background: linear-gradient(135deg, #003366, #0099cc); /* Gradien biru laut ke biru muda */
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  color: #fff; /* Warna teks putih untuk brand */
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* Warna teks putih untuk link */
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: hsla(0, 0%, 56%, 0.925); /* Efek hover biru gelap */
+  border-radius: 0.25rem;
+}
+
+/* Gaya Card dan Modal */
+.card {
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.modal-content {
+  border-radius: 0.5rem;
+}
+
+.modal-header {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+}
+   /* Style untuk tombol melayang */
+   .floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  .floating-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366; /* Warna hijau WhatsApp */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  .floating-btn a:hover {
+    background-color: #128C7E; /* Warna hijau WhatsApp gelap saat hover */
+  }
+  .floating-btn i {
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+  }
+footer {
+  background: linear-gradient(135deg, #003366, #0099cc);
+  color: #ffffff; /* White text color */
+  padding: 2rem 0; /* Add vertical padding */
+  text-align: center; /* Center align text */
+}
+
+footer .container {
+  max-width: 960px; /* Adjust container width */
+  margin: 0 auto; /* Center align container */
+}
+
+footer .list-unstyled {
+  padding-left: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+footer .list-unstyled li {
+  display: inline; /* Display list items inline */
+  margin: 0 10px; /* Add horizontal margin */
+}
+
+footer .list-unstyled a {
+  color: #ffffff; /* White color for links */
+  font-size: 2rem; /* Adjust icon size */
+  transition: color 0.3s; /* Add smooth transition effect */
+}
+
+footer .list-unstyled a:hover {
+  color: #adb5bd; /* Change color on hover */
+}
+
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 767.98px) {
+  .navbar-nav .nav-link {
+    padding: 0.5rem;
+  }
+}
