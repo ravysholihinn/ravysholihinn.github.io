@@ -7,9 +7,14 @@
 }
 
 /* General List Styling */
+
 ul {
   list-style-type: none;
   padding: 0;
+}
+
+ul li,
+ul li {
 }
 ul li {
   margin-bottom: 0.5rem;
@@ -21,29 +26,38 @@ ul li strong {
 
 /* Profile Image Styling */
 .profile-img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  width: 120px;
-  height: 60px; /* Reduced size */
-  margin-left: 10px; /* Adjusted margin */
   border: 3px solid #007bff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover; /* To make sure the image fits within the circle */
+  object-position: center; /* Center the image */
+  margin-left: 1rem;
+  margin-right: 0;
+
 }
 
 /* Navbar Styling */
 header {
   background: linear-gradient(135deg, #003366, #0099cc);
-  position: fixed; /* Changed to fixed */
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Increased z-index */
+  z-index: 1000;
 }
 
 .navbar {
-  padding: 0.5rem 2rem; /* Increased padding */
+  padding: 0.75rem 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centered content */
-  flex-wrap: wrap; /* Added wrap for responsiveness */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-brand {
@@ -52,6 +66,7 @@ header {
   font-size: 1.2rem; /* Adjusted size */
   color: white;
   text-decoration: none;
+  display: flex;
 }
 
 .portfolio-text {
@@ -62,6 +77,7 @@ header {
 
 .name-text {
   display: block;
+  font-size: 1.2rem;
   line-height: 1;
 }
 
@@ -76,6 +92,7 @@ header {
   color: #fff;
   font-size: 1.1rem; /* Increased font size for better visibility */
   padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
   font-weight: 500;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -84,9 +101,6 @@ header {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 0.25rem;
 }
-
-
-
 
 
 .navbar-nav .nav-link:hover {
@@ -172,7 +186,7 @@ footer .list-unstyled {
   margin: 0; /* Remove default margin */
 }
 
-footer .list-unstyled a {
+footer .list-unstyled a,footer .list-unstyled a{
   color: #ffffff;
   font-size: 2rem;
   transition: color 0.3s;
@@ -188,10 +202,15 @@ footer .list-unstyled a:hover {
 
 /* Responsif untuk tampilan mobile */
 @media (max-width: 767.98px) {
+  .navbar-nav{
+    margin-top: 10px;
+  }
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
+
 
   .navbar-brand {
     margin-bottom: 10px;
@@ -213,15 +232,15 @@ footer .list-unstyled a:hover {
     display: block;
   }
 
-    .navbar-brand {
-      display: flex;
-      flex-direction: column; /* Stack text and image */
-      align-items: center; /* Center items */
-      text-align: center; /* Center text */
-    }
-  
-    .profile-img {
-      margin-left: 0; /* Remove margin on mobile */
-      margin-top: 5px; /* Add some top margin */
-    }
+  .navbar-brand {
+    display: flex;
+    flex-direction: column; /* Stack text and image */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
   }
+
+  .profile-img {
+    margin-left: 0; /* Remove margin on mobile */
+    margin-top: 5px; /* Add some top margin */
+  }
+}
