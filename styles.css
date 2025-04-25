@@ -1,66 +1,67 @@
 /* General Reset and Styling */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 body {
     line-height: 1.6;
     color: #333;
 }
 /* General List Styling */
-ul {
+ul{
     list-style-type: none;
     padding: 0;
-    margin-bottom: 1.5rem;
 }
 
-ul li {
-    margin-bottom: 0.5rem;
-    padding: 0.75rem 1rem;
-    background-color: #f8f9fa;
+ul li,
+ul li{
+    margin-bottom: 0.25rem;
+    padding: 0.5rem;
+    background-color: rgba(233, 233, 233, 0.6);
     border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
 }
 
 ul li strong {
-    color: #007bff;
+  color: #007bff;
 }
 
 /* Navbar Styling */
 header {
     background: linear-gradient(135deg, #003366, #0099cc);
     position: fixed;
-    top: 0;
+    top: 0;    
     width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure header stays on top */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .navbar {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem; /* Spacing inside navbar */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    gap: 1rem; /* Space between text and image */
+    font-size: 1.2rem; /* Adjusted size */
+    color: black;
+    text-decoration: none; /* Remove underline */
 }
 
 .profile-img {
     border-radius: 50%;
     width: 60px;
-    height: 60px;
+    height: 60px;  
+    margin-left: auto;
+    margin-right: 0; 
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -69,40 +70,38 @@ header {
     font-weight: bold;
     line-height: 1.2;
 }
-
-.navbar-brand .name-text {
-    font-size: 1.2rem;
-    line-height: 1.2;
+.name-text {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1;
 }
 
-
 .nav-links {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-    transition: background-color 0.3s, color 0.3s;
+  color: black;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.25rem;
 }
 
 /* profile tentang saya  */
-.profile-img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  border: 3px solid #007bff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+
+
+
+
 .profile-img-about {
     display: block;
     max-width: 150px;
@@ -120,9 +119,7 @@ header {
   width: 100%;
 }
 
-.navbar-nav .nav-link:hover {
-  background-color: hsla(0, 0%, 56%, 0.925); /* Efek hover biru gelap */
-
+ .navbar-nav .nav-link:hover {
   border-radius: 0.25rem;
 }
 
@@ -222,14 +219,20 @@ footer .list-unstyled a:hover {
 
 
 /* Responsif untuk tampilan mobile */
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px){
   .navbar-nav .nav-link {
     padding: 0.5rem;
   }
   .navbar-brand {
     flex-direction: column;
     gap: 0.5rem;
-    text-align: center;
+    text-align: center; 
+    justify-content: center;
+  }
+
+    .navbar-brand .name-text {
+        font-size: 1.2rem;
+        line-height: 1;
   }
   .profile-img {
     width: 50px;
@@ -272,3 +275,4 @@ footer .list-unstyled a:hover {
         font-size: 1.2rem;
     }
 }
+.navbar-brand{margin: 0;}
