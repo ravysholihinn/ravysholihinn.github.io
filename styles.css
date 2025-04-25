@@ -1,73 +1,107 @@
 /* Reset beberapa gaya bawaan browser */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Styling untuk gambar logo di navbar */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa; /* Warna latar belakang lembut */
+}
+
+/* Styling Logo */
 .logo {
-  height: 10px; /* Atur tinggi gambar sesuai kebutuhan */
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
+    height: 40px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 /* Keterampilan Styling */
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 ul li {
-  margin-bottom: 0.5rem;
-}
-.profile-img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  border: 3px solid #007bff;
-}
-
-.btn-primary {
-  margin-top: 10px; /* Spasi antara gambar dan tombol */
+    margin-bottom: 0.5rem;
 }
 ul li strong {
-  color: #007bff;
+    color: #007bff;
 }
 
 /* Profil Gambar dan Informasi */
 .profile-img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  margin-right: 20px;
-  border: 3px solid #007bff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #007bff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+    margin-top: 10px;
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
 
 /* Navbar Styling */
 header {
-  background: linear-gradient(135deg, #003366, #0099cc); /* Gradien biru laut ke biru muda */
+    background: linear-gradient(135deg, #003366, #0099cc);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
-  padding: 0.5rem 1rem;
+    padding: 1rem 1.5rem;
 }
 
 .navbar-brand {
-  color: #fff; /* Warna teks putih untuk brand */
-  font-size: 1.5rem;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #eee;
 }
 
 .navbar-nav .nav-link {
-  color: #fff; /* Warna teks putih untuk link */
-  padding: 0.5rem 1rem;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: hsla(0, 0%, 56%, 0.925); /* Efek hover biru gelap */
-  border-radius: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 0.3rem;
+    color: #eee;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* Gaya Card dan Modal */
@@ -95,58 +129,73 @@ header {
   max-width: 100%;
   height: auto;
 }
-   /* Style untuk tombol melayang */
-   .floating-btn {
+
+/* Style untuk tombol melayang */
+.floating-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-  }
-  .floating-btn a {
+}
+
+.floating-btn a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #25D366; /* Warna hijau WhatsApp */
+    background-color: #25D366;
     color: white;
     padding: 10px 15px;
     border-radius: 50px;
     font-size: 16px;
     text-decoration: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-  }
-  .floating-btn a:hover {
-    background-color: #128C7E; /* Warna hijau WhatsApp gelap saat hover */
-  }
-  .floating-btn i {
-    margin-right: 8px; /* Jarak antara ikon dan teks */
-  }
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-btn a:hover {
+    background-color: #128C7E;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.floating-btn i {
+    margin-right: 8px;
+}
+
+
+/* Footer Styling */
 footer {
-  background: linear-gradient(135deg, #003366, #0099cc);
-  color: #ffffff; /* White text color */
-  padding: 2rem 0; /* Add vertical padding */
-  text-align: center; /* Center align text */
+    background: linear-gradient(135deg, #003366, #0099cc);
+    color: #ffffff;
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 30px;
 }
 
 footer .container {
-  max-width: 960px; /* Adjust container width */
-  margin: 0 auto; /* Center align container */
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 footer .list-unstyled {
-  padding-left: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+    padding-left: 0;
+    margin: 0;
 }
 
 footer .list-unstyled li {
-  display: inline; /* Display list items inline */
-  margin: 0 10px; /* Add horizontal margin */
+    display: inline;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+footer .list-unstyled li:hover{
+    transform: translateY(-2px);
 }
 
 footer .list-unstyled a {
-  color: #ffffff; /* White color for links */
-  font-size: 2rem; /* Adjust icon size */
-  transition: color 0.3s; /* Add smooth transition effect */
+    color: #ffffff;
+    font-size: 2.5rem;
+    transition: color 0.3s;
 }
 
 footer .list-unstyled a:hover {
@@ -155,8 +204,12 @@ footer .list-unstyled a:hover {
 
 
 /* Responsif untuk tampilan mobile */
-@media (max-width: 767.98px) {
-  .navbar-nav .nav-link {
-    padding: 0.5rem;
-  }
+@media (max-width: 576px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem;
+    }
 }
