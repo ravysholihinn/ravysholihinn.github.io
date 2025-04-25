@@ -1,5 +1,6 @@
 /* Reset beberapa gaya bawaan browser */
 * {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -48,18 +49,41 @@ ul li strong {
 
 /* Navbar Styling */
 header {
-  background: linear-gradient(135deg, #003366, #0099cc); /* Gradien biru laut ke biru muda */
+  background: linear-gradient(135deg, #003366, #0099cc);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar {
   padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.25rem;
 }
 
 .navbar-brand {
-  color: #fff; /* Warna teks putih untuk brand */
-  font-size: 1.5rem;
-}
-
+  font-size: 2rem;
 .navbar-nav .nav-link {
   color: #fff; /* Warna teks putih untuk link */
   padding: 0.5rem 1rem;
@@ -68,6 +92,7 @@ header {
 .navbar-nav .nav-link:hover {
   background-color: hsla(0, 0%, 56%, 0.925); /* Efek hover biru gelap */
   border-radius: 0.25rem;
+}
 }
 
 /* Gaya Card dan Modal */
@@ -95,42 +120,52 @@ header {
   max-width: 100%;
   height: auto;
 }
-   /* Style untuk tombol melayang */
-   .floating-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-  }
-  .floating-btn a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25D366; /* Warna hijau WhatsApp */
-    color: white;
-    padding: 10px 15px;
-    border-radius: 50px;
-    font-size: 16px;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-  }
-  .floating-btn a:hover {
-    background-color: #128C7E; /* Warna hijau WhatsApp gelap saat hover */
-  }
-  .floating-btn i {
-    margin-right: 8px; /* Jarak antara ikon dan teks */
-  }
+
+/* Style untuk tombol melayang */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.floating-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366; /* Warna hijau WhatsApp */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.floating-btn a:hover {
+  background-color: #128C7E; /* Warna hijau WhatsApp gelap saat hover */
+}
+
+.floating-btn i {
+  margin-right: 8px; /* Jarak antara ikon dan teks */
+}
+
 footer {
   background: linear-gradient(135deg, #003366, #0099cc);
-  color: #ffffff; /* White text color */
-  padding: 2rem 0; /* Add vertical padding */
-  text-align: center; /* Center align text */
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
 }
 
 footer .container {
-  max-width: 960px; /* Adjust container width */
-  margin: 0 auto; /* Center align container */
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+footer .list-unstyled li {
+  display: inline;
+  margin: 0 10px;
 }
 
 footer .list-unstyled {
@@ -138,15 +173,13 @@ footer .list-unstyled {
   margin: 0; /* Remove default margin */
 }
 
-footer .list-unstyled li {
-  display: inline; /* Display list items inline */
-  margin: 0 10px; /* Add horizontal margin */
+footer .list-unstyled a {
+  color: #ffffff;
+  font-size: 2rem;
+  transition: color 0.3s;
 }
 
-footer .list-unstyled a {
-  color: #ffffff; /* White color for links */
-  font-size: 2rem; /* Adjust icon size */
-  transition: color 0.3s; /* Add smooth transition effect */
+footer .list-unstyled li{
 }
 
 footer .list-unstyled a:hover {
@@ -156,7 +189,23 @@ footer .list-unstyled a:hover {
 
 /* Responsif untuk tampilan mobile */
 @media (max-width: 767.98px) {
-  .navbar-nav .nav-link {
-    padding: 0.5rem;
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-brand {
+      margin-bottom: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 0;
+        width: 100%;
+        display: block;
   }
 }
+
