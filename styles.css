@@ -113,7 +113,7 @@ header {
 
 /* Navbar Styling */
 header {
-  background: linear-gradient(135deg, #003366, #0099cc); /* Gradien biru laut ke biru muda */
+  background: linear-gradient(135deg, #000000, rgb(225, 226, 227)); /* Gradien biru laut ke biru muda */
   position: fixed;
   top: 0;
   width: 100%;
