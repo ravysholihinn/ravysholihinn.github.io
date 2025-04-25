@@ -32,8 +32,8 @@ ul li strong {
 
 /* Navbar Styling */
 header {
-    background: linear-gradient(135deg, #003366, #0099cc);
-    position: fixed;
+  background: linear-gradient(135deg, #003366, #0099cc);
+  position: fixed;
     top: 0;    
     width: 100%;
     z-index: 1000; /* Ensure header stays on top */
@@ -66,8 +66,8 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-brand .portfolio-text {
-    font-weight: bold;
+.portfolio-text {
+  font-weight: bold;
     line-height: 1.2;
 }
 .name-text {
@@ -130,7 +130,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
 }
-
 .card-title {
     font-size: 1.5rem;
     color: #007bff;
@@ -241,7 +240,7 @@ footer .list-unstyled a:hover {
 
   .nav-links {
       flex-direction: column;
-      width: 100%;
+      width: 100%;   
       text-align: center;
     }
   .nav-links a {
