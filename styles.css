@@ -1,52 +1,109 @@
-/* Reset beberapa gaya bawaan browser */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Arial', sans-serif; /* Modern font */
+  
 }
+
+/* Body Styling */
 body {
-  background-color: #f0f0f0; /* Add this line to set the background color */
+  background-color: #f8f9fa; /* Light grey background */
+  color: #343a40; /* Dark grey text color */
+  line-height: 1.6;
 }
 
+/* Header and Navbar */
+header {
+  background: linear-gradient(135deg, #003366, #0099cc); /* Deep blue gradient */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+
+nav.navbar {
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+nav.navbar.scrolled {
+    background-color: rgba(0, 51, 102, 0.9); /* Darker blue when scrolled */
+}
+
+/* Navigation Links and Brand */
+
+
+
+
+/* Main Content Area */
 main {
-  background-color: #fff; /* Add a background color */
-  padding: 20px; /* Add padding to main */
-  border-radius: 10px;
-}
-main > div {
-  padding: 10px; /* Add padding to all divs inside main */
+    background-color: #ffffff; /* White background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-bottom: 30px; /* Space below main content */
+  }
+  
+  main > div {
+    padding: 20px; /* Increased padding for content blocks */
+  }
+  
+/* Section Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #003366; /* Deep blue headers */
+    margin-bottom: 1rem;
 }
 
 
-/* Styling untuk gambar logo di navbar */
-.logo {
-  height: 10px; /* Atur tinggi gambar sesuai kebutuhan */
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
+/* Text Elements */
+p {
+    margin-bottom: 1rem; /* Space after paragraphs */
 }
 
-/* Keterampilan Styling */
+a {
+    color: #007bff; /* Standard blue link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* List Styles */
+ul, ol {
+    margin-bottom: 1rem; /* Space after lists */
+}
+
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
 }
 
 ul li {
-  margin-bottom: 0.5rem;
-}
-.profile-img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  border: 3px solid #007bff;
+    margin-bottom: 0.75rem; /* Space between list items */
 }
 
-.btn-primary {
-  margin-top: 10px; /* Spasi antara gambar dan tombol */
+/* Logo Styling */
+.logo {
+    height: 40px; /* Adjust height for better visibility */
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
 }
-ul li strong {
-  color: #007bff;
+
+
+/* Profile Image */
+.profile-img {
+    border-radius: 50%;
+    width: 150px; /* Larger image */
+    height: 150px;
+    border: 3px solid #007bff; /* Blue border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+.profile-img:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
 }
 
 /* Profil Gambar dan Informasi */
@@ -54,55 +111,42 @@ ul li strong {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  margin-right: 20px;
   border: 3px solid #007bff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Navbar Styling */
-header {
-  background: linear-gradient(135deg, #003366, #0099cc); /* Gradien biru laut ke biru muda */
-}
 
-.navbar {
-  padding: 0.5rem 1rem;
-}
-
-.navbar-brand {
-  color: #000; /* Warna teks Hitam untuk brand */
-  font-size: 1.5rem;
+.navbar-brand {  
+    color: #ffffff; /* White for brand text */
+    font-size: 1.75rem;
+    font-weight: bold; /* Bold brand text */
 }
 
 .navbar-nav .nav-link {
-  color: #000; /* Warna teks Hitam untuk link */
-  padding: 0.5rem 1rem;
-  transition: color 0.3s;
-}
-.navbar-nav .nav-link:hover, .navbar-brand:hover{
-  color: #000; /* keep the color black when hover*/
+    color: #ffffff; /* White link color */
+    padding: 0.75rem 1rem;
+    transition: color 0.3s, background-color 0.3s; /* Smooth transitions */
 }
 
-.navbar-nav .nav-link:hover {
-  background-color: hsla(0, 0%, 56%, 0.925); /* Efek hover biru gelap */
-  border-radius: 0.25rem;
+.navbar-nav .nav-link:hover, .navbar-brand:hover{
+  color: #ffffff; /* keep the color white when hover*/
 }
+
+
+.navbar-nav .nav-link:hover {    
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+    border-radius: 0.25rem;
+}
+
 /* hero styling*/
 .hero {
     background-color: #343a40;
-    color: white;
+    color: #ffffff;
     padding: 100px 20px;
     text-align: center;
 }
 /* button download styling */
-.btn-download{
-    background-color: purple;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-}
 
 /* Gaya Card dan Modal */
 .card {
@@ -110,14 +154,14 @@ header {
 }
 
 .card-title {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .card-body {
   padding: 1.25rem;
 }
 
-.modal-content {
+.modal-content{
   border-radius: 0.5rem;
 }
 
@@ -129,52 +173,54 @@ header {
   max-width: 100%;
   height: auto;
 }
-   /* Style untuk tombol melayang */
-   .floating-btn {
+/* Floating WhatsApp Button */
+.floating-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-  }
-  .floating-btn a {
+}
+
+.floating-btn a {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #25D366; /* Warna hijau WhatsApp */
     color: white;
     padding: 10px 15px;
-    border-radius: 50px;
+    border-radius: 50%; /* Circular button */
     font-size: 16px;
     text-decoration: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
-  }
-  .floating-btn a:hover {
+}
+
+.floating-btn a:hover {
     background-color: #128C7E; /* Warna hijau WhatsApp gelap saat hover */
-  }
-    /* Make the WhatsApp icon responsive */
-  .floating-btn i {
+}
+
+/* WhatsApp Icon */
+.floating-btn i {
     width: auto; /* Ensure the image scales properly */
     height: auto; /* Maintain aspect ratio */
-  }
-  .floating-btn i {
-    margin-right: 8px; /* Jarak antara ikon dan teks */
-  }
+}
+
+/* Footer Styling */
 footer {
-  background: linear-gradient(135deg, #003366, #0099cc);
-  color: #ffffff; /* White text color */
-  padding: 2rem 0; /* Add vertical padding */
-  text-align: center; /* Center align text */
+    background: linear-gradient(135deg, #003366, #0099cc); /* Deep blue gradient */
+    color: #ffffff; /* White text */
+    padding: 2rem 0;
+    text-align: center;
 }
 
 footer .container {
-  max-width: 960px; /* Adjust container width */
-  margin: 0 auto; /* Center align container */
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 footer .list-unstyled {
-  padding-left: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+    padding-left: 0;
+    margin: 0;
 }
 
 footer .list-unstyled li {
@@ -188,26 +234,28 @@ footer .list-unstyled a {
   transition: color 0.3s; /* Add smooth transition effect */
 }
 
-footer .list-unstyled a:hover {
-  color: #adb5bd; /* Change color on hover */
+footer .list-unstyled a:hover {  
+    color: #adb5bd; /* Light grey on hover */
 }
 
-
-/* Responsif untuk tampilan mobile */
+/* Responsive Adjustments */
 @media (max-width: 767.98px) {
-  .navbar-nav .nav-link {
-    padding: 0.5rem;
-  }
 
-  .navbar-brand {
-    font-size: 1.2rem; /* Kurangi ukuran font pada tampilan mobile */
-  }
-  .navbar-nav{
-    text-align: center;
-  }
+    .navbar-nav .nav-link {
+        padding: 0.5rem;
+    }
 
-  /* Increase icon size on mobile */
-  .floating-btn a i.fa-2x {
-    font-size: 1.5em; /* Adjust size as needed */
-  }
+    .navbar-brand {
+        font-size: 1.2rem; /* Smaller font on mobile */
+    }
+    .navbar-nav{
+        text-align: center;
+    }
+
+    /* Larger icon on mobile */
+    .floating-btn a i {
+        font-size: 1.5em;
+    }
+
 }
+
