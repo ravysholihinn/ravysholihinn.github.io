@@ -47,7 +47,7 @@
     background-size: cover;">
   <div class="container text-center">
     <p>Selamat Datang di Portofolio saya</p>
-    <a href="Ravy Sholihin_CV.pdf" class="btn btn-light mt-3" download>Download CV saya</a>
+    <a href="Ravy Sholihin_CV.pdf" class="btn mt-3 download-cv-button" download>Download CV saya</a>
   </div>
 </section>
 
@@ -98,6 +98,23 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+  .download-cv-button {
+    background-color: rgba(0, 123, 255, 0.7); /* Semi-transparent blue */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 25px; /* Round the edges */
+    border: none; /* Remove border */
+    transition: background-color 0.3s;
+    text-decoration: none;
+  }
+  .download-cv-button:hover {
+    background-color: rgba(0, 123, 255, 0.9);
+  }
+
+</style>
+
+
 
 <script>
   function loadHTML(filename, elementId) {
