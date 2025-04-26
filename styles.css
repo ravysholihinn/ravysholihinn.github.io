@@ -73,6 +73,23 @@ header {
   background-color: hsla(0, 0%, 56%, 0.925); /* Efek hover biru gelap */
   border-radius: 0.25rem;
 }
+/* hero styling*/
+.hero {
+    background-color: #343a40;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+/* button download styling */
+.btn-download{
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
 
 /* Gaya Card dan Modal */
 .card {
