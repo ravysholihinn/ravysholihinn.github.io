@@ -12,14 +12,44 @@
   
 </head>
 <body>
-
-  <div id="header"></div>
-<section class="hero" style="background-color: #343a40; color: #ffffff;">
-    <div class="container text-center">
-        <p>HI Saya</p>
-        <p><b>Ravy Sholihin</b></p>
-        <button class="btn btn-light mt-3">Download Resume</button>
-    </div>
+<div id="header">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light d-flex align-items-center">
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand text-white" href="#">
+          Portofolio <br>Ravy Sholihin
+          </a>
+        <div class="ml-3">
+          <img src="foto_portpolio_saya/foto.jpg" alt="Ravy Sholihin" style="width: 100px; height: 100px; border-radius: 50%;">
+        </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="#about">Tentang Saya</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#education">Pendidikan</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#experience_work">Pengalaman</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#certificates">Sertifikat</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#skills">Keterampilan</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#projects">Project</a></li>
+        </ul>
+      </div>
+    </nav>
+    </header>
+</div>
+<section class="hero" style="background-image: url('https://files.123freevectors.com/wp-content/original/116378-abstract-dark-blue-blurred-bokeh-background-image.jpg'); 
+height: 100vh; 
+color: #ffffff; 
+display: flex; 
+align-items: center;
+justify-content: center;">
+  <div class="container text-center">
+    <p>Selamat Datang di Portofolio saya</p>
+    <button class="btn btn-light mt-3">Hubungi saya</button>
+  </div>
 </section>
 
 
@@ -48,12 +78,12 @@
     </div>
 
 
-  <div id="profile" ></div>
-  <div id="Riwayat_Pendidikan" ></div>
-  <div id="pengalaman_kerja"></div>
-  <div id="sertifikat"></div>
-  <div id="keterampilan"></div>
-  <div id="project"></div>
+  <div id="about"></div>
+  <div id="education" ></div>
+  <div id="experience_work"></div>
+  <div id="certificates"></div>
+  <div id="skills"></div>
+  <div id="projects"></div>
   <div id="model"></div>
  
   
@@ -69,26 +99,21 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
-
 <script>
   function loadHTML(filename, elementId) {
-      fetch(filename)
-          .then(response => response.text())
-          .then(data => document.getElementById(elementId).innerHTML = data);
+    fetch(filename)
+      .then(response => response.text())
+      .then(data => document.getElementById(elementId).innerHTML = data);
   }
-  document.addEventListener('DOMContentLoaded', function() {
-      loadHTML('header.html', 'header');
-      loadHTML('footer.html', 'footer');
-      loadHTML('profile.html', 'profile');
-      loadHTML('pengalaman_kerja.html', 'pengalaman_kerja');
-      loadHTML('riwayatpendidikan.html', 'Riwayat_Pendidikan');
-      loadHTML('sertifikat.html', 'sertifikat');
-      loadHTML('project.html', 'project');
-      loadHTML('ketrampilan.html', 'keterampilan');
-      loadHTML('model.html', 'model');
+  document.addEventListener('DOMContentLoaded', function () {
+    loadHTML('footer.html', 'footer');
+    loadHTML('profile.html', 'about');
+    loadHTML('pengalaman_kerja.html', 'experience_work');
+    loadHTML('riwayatpendidikan.html', 'education');
+    loadHTML('sertifikat.html', 'certificates');
+    loadHTML('project.html', 'projects');
+    loadHTML('ketrampilan.html', 'skills');
+    loadHTML('model.html', 'model');
   });
 </script>
   <!-- JavaScript -->
@@ -171,7 +196,7 @@
       const passwordInput = document.getElementById('passwordInput').value;
 
       if (passwordInput === correctPassword) {
-          resetVisitCount();
+        resetVisitCount();
       } else {
           document.getElementById('resetMessage').textContent = 'Password salah. Silakan coba lagi.';
       }
@@ -181,14 +206,5 @@
   updateVisitInfo();
 </script>
 
-<script>
-  // Menambahkan id sesuai dengan navbar
-    document.getElementById('profile').setAttribute('id', 'about');
-    document.getElementById('Riwayat_Pendidikan').setAttribute('id', 'education');
-    document.getElementById('pengalaman_kerja').setAttribute('id', 'experience_work');
-    document.getElementById('sertifikat').setAttribute('id', 'certificates');
-    document.getElementById('keterampilan').setAttribute('id', 'skills');
-    document.getElementById('project').setAttribute('id', 'projects');
-  </script>
 </body>
 </html>
