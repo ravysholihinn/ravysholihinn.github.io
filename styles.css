@@ -13,14 +13,7 @@ body {
   color: #343a40; /* Dark grey text color */
   line-height: 1.6;
 }
-download-cv-button{
-  background-color: #007bff;
-  text-color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+
 /* Header and Navbar */
 header {
   background: linear-gradient(135deg, #003366, #0099cc); /* Deep blue gradient */
@@ -59,11 +52,6 @@ main {
 h1, h2, h3, h4, h5, h6 {
     color: #003366; /* Deep blue headers */
     margin-bottom: 1rem;
-}
-
-h1, h2 {
-  color: black; /* Text color to black */
-  margin-bottom: 1rem;
 }
 
 
