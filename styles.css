@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #f0f0f0; /* Add this line to set the background color */
+}
+
 
 /* Styling untuk gambar logo di navbar */
 .logo {
