@@ -8,6 +8,15 @@ body {
   background-color: #f0f0f0; /* Add this line to set the background color */
 }
 
+main {
+  background-color: #fff; /* Add a background color */
+  padding: 20px; /* Add padding to main */
+  border-radius: 10px;
+}
+main > div {
+  padding: 10px; /* Add padding to all divs inside main */
+}
+
 
 /* Styling untuk gambar logo di navbar */
 .logo {
@@ -143,6 +152,11 @@ header {
   .floating-btn a:hover {
     background-color: #128C7E; /* Warna hijau WhatsApp gelap saat hover */
   }
+    /* Make the WhatsApp icon responsive */
+  .floating-btn i {
+    width: auto; /* Ensure the image scales properly */
+    height: auto; /* Maintain aspect ratio */
+  }
   .floating-btn i {
     margin-right: 8px; /* Jarak antara ikon dan teks */
   }
@@ -192,4 +206,8 @@ footer .list-unstyled a:hover {
     text-align: center;
   }
 
+  /* Increase icon size on mobile */
+  .floating-btn a i.fa-2x {
+    font-size: 1.5em; /* Adjust size as needed */
+  }
 }
