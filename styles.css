@@ -7,63 +7,99 @@
   
 }
 
+/* Layout Container */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes full viewport height */
+}
+
 /* Body Styling */
 body {
-  background-color: #f8f9fa; /* Light grey background */
+  background-color: #e9ecef; /* Light grey background */
   color: #343a40; /* Dark grey text color */
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0; /* Remove body margins */
 }
 
 /* Header and Navbar */
 header {
-  background: linear-gradient(135deg, #003366, #0099cc); /* Deep blue gradient */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* subtle shadow */
+  background: #003366; /* Deep blue background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav.navbar {
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   width: 100%;
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
 }
 
 nav.navbar.scrolled {
-    background-color: rgba(0, 51, 102, 0.9); /* Darker blue when scrolled */
+  background-color: rgba(0, 51, 102, 0.9); /* Darker blue when scrolled */
 }
-
-/* Navigation Links and Brand */
-
-
-
 
 /* Main Content Area */
 main {
-    background-color: #ffffff; /* White background */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    margin-bottom: 30px; /* Space below main content */
-  }
-  
-  main > div {
-    padding: 20px; /* Increased padding for content blocks */
-  }
-  
-/* Section Headers */
-h1, h2, h3, h4, h5, h6 {
-    color: #0072e4; /* Deep blue headers */
-    margin-bottom: 1rem;
+  background-color: #ffffff; /* White background */
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  margin: 0 1rem 2rem 1rem; /* Space below main content */
+  flex-grow: 1;
 }
 
+/* Section Headers */
+h1, h2, h3, h4, h5, h6 {
+  color: #0056b3; /* Darker blue headers */
+  margin-bottom: 1rem;
+  font-weight: 600; /* Semi-bold headers */
+}
+
+main > div {
+  padding: 1.5rem; /* Increased padding for content blocks */
+}
 
 /* Text Elements */
 p {
-    margin-bottom: 1rem; /* Space after paragraphs */
+  margin-bottom: 1rem; /* Space after paragraphs */
+  color: #495057; /* Slightly darker text */
 }
 
 a {
-    color: #007bff; /* Standard blue link color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth transition */
+  color: #007bff; /* Standard blue link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+a.btn {
+  display: inline-block;
+  background-color: #007bff; /* Blue button */
+  color: #ffffff; /* White text */
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+a.btn-outline {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+a.btn-outline:hover {
+  background-color: #007bff;
+  color: #ffffff;
 }
 
 a:hover {
@@ -71,53 +107,51 @@ a:hover {
 }
 
 /* List Styles */
-ul, ol {
-    margin-bottom: 1rem; /* Space after lists */
+ul,
+ol {
+  margin-bottom: 1rem; /* Space after lists */
 }
 
 ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
 }
 
 ul li {
-    margin-bottom: 0.75rem; /* Space between list items */
+  margin-bottom: 0.75rem; /* Space between list items */
 }
 
 /* Logo Styling */
 .logo {
-    height: 40px; /* Adjust height for better visibility */
-    width: auto;
-    display: inline-block;
-    vertical-align: middle;
+  height: 40px; /* Adjust height for better visibility */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
-
 
 /* Profile Image */
 .profile-img {
-    border-radius: 50%;
-    width: 150px; /* Larger image */
-    height: 150px;
-    border: 3px solid #007bff; /* Blue border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  border-radius: 50%;
+  width: 150px; /* Larger image */
+  height: 150px;
+  border: 3px solid #007bff; /* Blue border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
 }
 .profile-img:hover {
-    transform: scale(1.05); /* Slight enlargement on hover */
+  transform: scale(1.05); /* Slight enlargement on hover */
 }
 
-/* Profil Gambar dan Informasi */
-.profile-img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  border: 3px solid #007bff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Profile Image in Navbar */
+.navbar .profile-img {
+  width: 50px;
+  height: 50px;
 }
 
 /* Navbar Styling */
 
-.navbar-brand {  
+.navbar-brand {
     color: #ffffff; /* White for brand text */
     font-size: 1.75rem;
     font-weight: bold; /* Bold brand text */
@@ -126,35 +160,45 @@ ul li {
 .navbar-nav .nav-link {
     color: #ffffff; /* White link color */
     padding: 0.75rem 1rem;
-    transition: color 0.3s, background-color 0.3s; /* Smooth transitions */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
 }
 
-.navbar-nav .nav-link:hover, .navbar-brand:hover{
-  color: #ffffff; /* keep the color white when hover*/
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Lighten on hover */
+  border-radius: 0.25rem;
+  color: #f8f9fa; /* White link color */
 }
 
+.navbar-brand:hover {
+  color: #f8f9fa;
+}
 
-.navbar-nav .nav-link:hover {    
-    background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+.nav-link.active, .nav-link-active{
+    background-color: #ffc107; /* Yellow */
     border-radius: 0.25rem;
 }
 
 /* hero styling*/
-.hero {
-    background-color: #343a40;
-    color: #ffffff;
-    padding: 100px 20px;
-    text-align: center;
+.hero {  
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+  margin-bottom: 2rem;
 }
+
+
+
 /* button download styling */
+.btn-download {
+  background-color: #28a745; /* Green button */
+  border: none;
+  transition: background-color 0.3s ease;
+}
 
 /* Gaya Card dan Modal */
 .card {
-  margin-bottom: 1.5rem;
-}
-
-.card-title {
-    font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .card-body {
@@ -167,11 +211,13 @@ ul li {
 
 .modal-header {
   border-bottom: 1px solid #dee2e6;
+  padding: 1rem;
 }
 
 .modal-body img {
   max-width: 100%;
   height: auto;
+  border-radius: 0.25rem;
 }
 /* Floating WhatsApp Button */
 .floating-btn {
@@ -188,10 +234,10 @@ ul li {
     background-color: #25D366; /* Warna hijau WhatsApp */
     color: white;
     padding: 10px 15px;
-    border-radius: 50%; /* Circular button */
+    border-radius: 50%;
     font-size: 16px;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
 }
 
@@ -207,8 +253,10 @@ ul li {
 
 /* Footer Styling */
 footer {
-    background: linear-gradient(135deg, #003366, #0099cc); /* Deep blue gradient */
-    color: #ffffff; /* White text */
+    background-color: #343a40; /* Dark background */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Shadow above */
+    color: #ffffff;
+    margin-top: auto;
     padding: 2rem 0;
     text-align: center;
 }
@@ -223,7 +271,7 @@ footer .list-unstyled {
     margin: 0;
 }
 
-footer .list-unstyled li {
+footer ul.list-unstyled li {
   display: inline; /* Display list items inline */
   margin: 0 10px; /* Add horizontal margin */
 }
@@ -240,22 +288,31 @@ footer .list-unstyled a:hover {
 
 /* Responsive Adjustments */
 @media (max-width: 767.98px) {
-
     .navbar-nav .nav-link {
         padding: 0.5rem;
+        text-align: left; /* Align text to left */
     }
 
     .navbar-brand {
-        font-size: 1.2rem; /* Smaller font on mobile */
-    }
-    .navbar-nav{
-        text-align: center;
+        font-size: 1.5rem;
     }
 
-    /* Larger icon on mobile */
+    /* Make navbar links full-width */
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        text-align: left;
+    }
+
+    .navbar .profile-img {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Adjust icon size on mobile */
     .floating-btn a i {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
-
 }
-

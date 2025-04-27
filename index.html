@@ -12,46 +12,44 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light d-flex align-items-center">
-    <div class="d-flex align-items-center">
-      <a class="navbar-brand text-white" href="#">
-        Portofolio <br>Ravy Sholihin
-      </a>
-      <div class="ml-3">
-        <img src="foto_portpolio_saya/foto.jpg" alt="Ravy Sholihin"
-          class="profile-pic">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <span class="mr-3">Portofolio <br>Ravy Sholihin</span>
+          <img src="foto_portpolio_saya/foto.jpg" alt="Ravy Sholihin" class="profile-pic-header">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">Tentang Saya</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Pendidikan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience_work">Pengalaman</a></li>
+            <li class="nav-item"><a class="nav-link" href="#certificates">Sertifikat</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Keterampilan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Project</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link text-white" href="#about">Tentang Saya</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#education">Pendidikan</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#experience_work">Pengalaman</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#certificates">Sertifikat</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#skills">Keterampilan</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#projects">Project</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
-<section class="hero"
-  style="background-image: url('https://img.freepik.com/free-vector/color-seamless-space-pattern_102902-2360.jpg?semt=ais_hybrid&w=740');    height: 100vh;
+    </nav>
+  </header>
+  <section class="hero" style="background-image: url('https://img.freepik.com/free-vector/color-seamless-space-pattern_102902-2360.jpg?semt=ais_hybrid&w=740'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    
-    background-size: cover;">
-  <div class="container text-center">
-       <a href="Ravy Sholihin_CV.pdf" class="btn mt-3 download-cv-button" download>Download CV saya</a>
-  </div>
-</section>
+    padding: 100px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;">
+    <div class="container">
+      <h1 class="display-4">Selamat Datang di Portofolio Saya</h1>
+      <p class="lead">Temukan lebih banyak tentang saya dan proyek-proyek saya.</p>
+      <a href="Ravy Sholihin_CV.pdf" class="btn btn-light mt-3 download-cv-button" download>Download CV saya</a>
+    </div>
+  </section>
 
 
 <main class="container my-5">
@@ -89,13 +87,14 @@
 
 
 </main>
-<div id="footer"></div>
-<div class="floating-btn">
-  <a href="https://wa.me/6281293972566" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-whatsapp fa-2x"></i>
-    Hubungi Saya
-  </a>
-</div>
+  <div id="footer"></div>
+  <div class="floating-btn">
+    <a href="https://wa.me/6281293972566" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp fa-2x"></i>
+      Hubungi Saya
+    </a>
+  </div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -121,7 +120,7 @@
     loadHTML('model.html', 'model');
   });
 </script>
-<!-- JavaScript -->
+
 <script>
   // Function to update the visit count
   function updateVisitCount() {
