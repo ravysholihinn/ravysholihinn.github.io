@@ -1,31 +1,11 @@
 /* Reset beberapa gaya bawaan browser */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: #f0f0f0; /* Add this line to set the background color */
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #f0f0f0; /* Add this line to set the background color */ }
 
-main {
-  background-color: #fff; /* Add a background color */
-  padding: 20px; /* Add padding to main */
-  border-radius: 10px;
-}
-main > div {
-  padding: 10px; /* Add padding to all divs inside main */
-}
-
-
-/* Styling untuk gambar logo di navbar */
-.logo {
-  height: 10px; /* Atur tinggi gambar sesuai kebutuhan */
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
-}
-
+main { background-color: #fff; /* Add a background color */ padding: 20px; /* Add padding to main */ border-radius: 10px; }
+main > div { padding: 10px; /* Add padding to all divs inside main */ }
+/* Styling untuk gambar logo di navbar */ .logo { height: 10px; /* Atur tinggi gambar sesuai kebutuhan */ width: auto; display: inline-block; vertical-align: middle; }
+#logo{height:40px;}
 /* Keterampilan Styling */
 ul {
   list-style-type: none;
@@ -60,10 +40,6 @@ ul li strong {
 }
 
 /* Navbar Styling */
-header {
-  background: linear-gradient(135deg, #003366, #0099cc); /* Gradien biru laut ke biru muda */
-}
-
 .navbar {
   padding: 0.5rem 1rem;
 }
@@ -77,11 +53,12 @@ header {
   color: #000; /* Warna teks Hitam untuk link */
   padding: 0.5rem 1rem;
   transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 .navbar-nav .nav-link:hover, .navbar-brand:hover{
   color: #000; /* keep the color black when hover*/
 }
-
+.navbar.scrolled{background-color: rgba(0, 51, 102, 0.9);}
 .navbar-nav .nav-link:hover {
   background-color: hsla(0, 0%, 56%, 0.925); /* Efek hover biru gelap */
   border-radius: 0.25rem;
