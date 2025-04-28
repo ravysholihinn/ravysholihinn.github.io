@@ -208,10 +208,10 @@ ul li {
 /*---------------------------------------------------- Experience Styling ------------------------------------------------------*/
 /* Timeline Container */
 .timeline {
-    position: relative; /* For absolute positioning of line and circles */
-    width: 100%;
+  position: relative; /* For absolute positioning of line and circles */
+  width: 100%;
+  padding: 20px 0; /* Add padding to the top and bottom of the timeline */
 }
-
 /* Timeline Line */
 .timeline::before {
     content: ''; /* Create a pseudo-element */
@@ -219,38 +219,82 @@ ul li {
     left: 50%; /* Center the line */
     width: 2px; /* Width of the line */
     background-color: #007bff; /* Line color */
-    top: 0;
-    bottom: 0; /* Full height */
+    top: 20px; /* Start the line a bit lower */
+    bottom: 20px; /* End the line a bit higher */
     transform: translateX(-50%); /* Center perfectly */
     z-index: 1; /* Behind the content */
-}
-
+  }
 /* Timeline Items */
 .timeline-item {
-    width: 50%; /* Each item takes half the width */
-    margin-bottom: 30px; /* Space between items */
-    position: relative; /* For absolute positioning of circles */
+  width: 45%; /* Each item takes half the width */
+  margin-bottom: 40px; /* Space between items */
+  position: relative; /* For absolute positioning of circles */
+  opacity: 0; /* Start with zero opacity */
+  transform: translateY(20px); /* Start below */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Show timeline item with animation */
+.timeline-item.show {
+  opacity: 1; /* Full opacity when visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+/* timeline item content */
+.timeline-content {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* timeline date color */
+.timeline-date{
+  color: gray;
 }
 
 /* Timeline Item: Odd items (on the left) */
-.timeline-item:nth-child(odd) {
-    float: left; /* Float to the left */
-    clear: right; /* Clear the right float */
-    text-align: right; /* Right-align the text */
+.timeline-item:nth-child(odd) { /* For odd items */
+  float: left; /* Float to the left */
+  clear: right; /* Clear the right float */
+  text-align: right; /* Right-align the text */
 }
 
 /* Timeline Item: Even items (on the right) */
-.timeline-item:nth-child(even) {
-    float: right; /* Float to the right */
-    clear: left; /* Clear the left float */
-    text-align: left; /* Left-align the text */
+.timeline-item:nth-child(even) { /* For even items */
+  float: right; /* Float to the right */
+  clear: left; /* Clear the left float */
+  text-align: left; /* Left-align the text */
 }
-/* timeline item content */
-.timeline-content {
-    padding: 1.5rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+/* Timeline Circle */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #007bff; /* Blue circle */
+  border: 3px solid #fff; /* White border */
+  z-index: 2; /* On top of the line */
+}
+
+/* Position the circle on the left */
+.timeline-item:nth-child(odd)::before {
+  right: -23px; /* Slightly outside the content */
+}
+
+/* Position the circle on the right */
+.timeline-item:nth-child(even)::before {
+  left: -23px; /* Slightly outside the content */
+}
+/* Clear floats after the last timeline item */
+.timeline::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 /*-------------------------------------------------------------------------------------------------------*/
@@ -309,9 +353,6 @@ ul li {
 /* Fade-in when visible */
 .fade-in.visible {
     opacity: 1; /* Full opacity when visible */
-}
-.timeline-date{
-  color: gray;
 }
 
 /*---------------------------------------------------- Project Styling ------------------------------------------------------*/
@@ -588,6 +629,18 @@ footer .copyright {
     .hero {
         padding: 70px 20px;
     }        
+     /* timeline on mobile*/
+    .timeline-item {
+        width: 100%; /* Each item takes half the width */
+        margin-bottom: 40px; /* Space between items */
+    }
+    /* remove float on mobile */
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        float: none; /* Float to the left */
+        clear: none; /* Clear the right float */
+        text-align: left; /* Right-align the text */
+    }
 }
 
 @media (max-width: 575.98px) {
