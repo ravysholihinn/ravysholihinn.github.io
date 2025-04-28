@@ -4,17 +4,6 @@ body { background-color: #f0f0f0; /* Add this line to set the background color *
 
 main { background-color: #fff; /* Add a background color */ padding: 20px; /* Add padding to main */ border-radius: 10px; }
 main > div { padding: 10px; /* Add padding to all divs inside main */ }
-/* Styling untuk gambar logo di navbar */ .logo { height: 10px; /* Atur tinggi gambar sesuai kebutuhan */ width: auto; display: inline-block; vertical-align: middle; }
-#logo{height:40px;}
-/* Keterampilan Styling */
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  margin-bottom: 0.5rem;
-}
 .profile-img {
   border-radius: 50%;
   width: 120px;
@@ -52,7 +41,6 @@ ul li strong {
 .navbar-nav .nav-link {
   color: #000; /* Warna teks Hitam untuk link */
   padding: 0.5rem 1rem;
-  transition: color 0.3s;
   transition: color 0.3s ease;
 }
 .navbar-nav .nav-link:hover, .navbar-brand:hover{
@@ -164,6 +152,35 @@ footer .list-unstyled a:hover {
   color: #adb5bd; /* Change color on hover */
 }
 
+/* Styling untuk gambar logo di navbar */ .logo { height: 10px; /* Atur tinggi gambar sesuai kebutuhan */ width: auto; display: inline-block; vertical-align: middle; }
+#logo{height:40px;}
+/* Keterampilan Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+.skill-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.skill-card{
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+.skill-card:hover{transform: translateY(-5px);}
+.skill-title{font-size: 1.2rem;font-weight: bold;margin-bottom: 10px;}
+.skill-description{margin-bottom: 10px;}
+.skill-card img{width: 100%;height: 200px;}
+main{margin-bottom: 20px;}
+main h2{margin-bottom: 20px;}
 
 /* Responsif untuk tampilan mobile */
 @media (max-width: 767.98px) {
