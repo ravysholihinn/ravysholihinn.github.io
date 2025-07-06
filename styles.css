@@ -192,9 +192,11 @@ ul li {
   z-index: 1;
 }
 
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
 .timeline-item {
-  width: 45%;
-  margin-bottom: 40px;
   position: relative;
   opacity: 0;
   transform: translateY(20px);
@@ -206,22 +208,16 @@ ul li {
   transform: translateY(0);
 }
 
+.timeline-item {
+  width: 100%; /* Default to full width for stacking */
+  margin-bottom: 40px;
+  position: relative;
+}
+
 .timeline-item::before {
   content: '';
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #007bff;
-  border: 3px solid #fff;
-  z-index: 2;
-}
-
-.timeline-item:nth-child(odd) {
-  float: left;
-  clear: right;
   text-align: right;
 }
 
@@ -229,12 +225,18 @@ ul li {
   right: -23px;
 }
 
+.timeline::before {
+  left: 20px; /* Move timeline line to the left on smaller screens */
+  transform: translateX(0);
+  top: 0;
+  bottom: 0;
+}
+
 .timeline-item:nth-child(even) {
-  float: right;
-  clear: left;
   text-align: left;
 }
 
+/* Adjustments for mobile view */
 .timeline-item:nth-child(even)::before {
   left: -23px;
 }
@@ -250,6 +252,17 @@ ul li {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the indicator circles */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px; /* Adjust vertical position */
+  left: 13px; /* Align with the timeline line */
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
 }
 
 .timeline-date {
@@ -336,6 +349,18 @@ ul li {
   margin-bottom: 10px;
 }
 
+.project-image-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  gap: 10px; /* Add space between images */
+  justify-content: center; /* Center images when they stack */
+  margin-bottom: 10px;
+}
+
+.project-image-container img {
+  max-width: 100%; /* Ensure images don't exceed their container */
+  height: auto;
+}
 .project-description {
   font-size: 0.95rem;
 }
@@ -495,11 +520,10 @@ footer .copyright {
     padding: 70px 20px;
   }
 
-  .timeline-item {
-    width: 100%;
-    float: none;
-    clear: none;
-    text-align: left;
+  /* Adjust timeline for smaller screens */
+  .timeline::before {
+    left: 20px;
+    transform: translateX(0);
   }
 }
 
