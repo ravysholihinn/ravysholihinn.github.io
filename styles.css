@@ -122,6 +122,14 @@ header {
     margin-right: 8px; /* Jarak antara ikon dan teks */
   }
 footer {
+
+/* Gaya untuk teks di bagian hero agar putih dan di tengah */
+.hero-content h1,
+.hero-content p {
+  color: white;
+  text-align: center;
+}
+
   background: linear-gradient(135deg, #003366, #0099cc);
   color: #ffffff; /* White text color */
   padding: 2rem 0; /* Add vertical padding */
