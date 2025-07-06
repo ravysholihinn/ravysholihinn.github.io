@@ -452,10 +452,20 @@ ul li {
   transform: translateY(-0.25rem);
   box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, 0.2);
 }
-/* certificate image container */
+/* Sertifikat: Gambar responsif dan proporsional */
 .certificate-image-container {
-  height: 200px; /* Fixed height for images */
+  height: 230px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.certificate-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* Perbaikan penting: jaga rasio gambar */
 }
 
 /*---------------------------------------------------- Container Styling ------------------------------------------------------*/
