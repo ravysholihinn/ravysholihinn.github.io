@@ -99,6 +99,7 @@ header {
 .hero-content h1,
 .hero-content p {
   color: white !important;
+  font-weight: bold;
 }
    /* Style untuk tombol melayang */
    .floating-btn {
