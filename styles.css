@@ -1,540 +1,162 @@
-/*---------------------------------------------------- Global Reset ------------------------------------------------------*/
+/* Reset beberapa gaya bawaan browser */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.8;
-  color: #333;
 }
 
-/*---------------------------------------------------- Body & Layout ------------------------------------------------------*/
-body {
-  font-size: 1rem;
-  background-color: #f8f9fa;
-  color: #fff; /* Set default text color to white */
+/* Styling untuk gambar logo di navbar */
+.logo {
+  height: 10px; /* Atur tinggi gambar sesuai kebutuhan */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.layout-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-}
-
-main .content, main > div {
-  padding: 2rem;
-}
-
-/*---------------------------------------------------- Headings ------------------------------------------------------*/
-h1, h2, h3, h4, h5, h6 {
-  color: #212529;
-  margin-bottom: 1.2rem;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-h1 { font-size: 3rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.8rem; }
-h4 { font-size: 1.5rem; }
-h5, h6 { font-size: 1.15rem; }
-
-/*---------------------------------------------------- Links ------------------------------------------------------*/
-a {
-  color: #fff; /* Changed link color for better visibility on dark backgrounds */
-  text-decoration: none;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #005fa3;
-  color: #ced4da; /* Lighter color on hover */
-}
-
-/*---------------------------------------------------- Buttons ------------------------------------------------------*/
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 24px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: #0069d9;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-
-.btn-outline-primary {
-  background-color: transparent;
-  color: #0077cc;
-  border: 2px solid #0077cc;
-}
-
-.btn-outline-primary:hover {
-  background-color: #007bff;
-  color: #fff;
-  border-color: #007bff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-
-.btn-download {
-  background-color: #28a745;
-}
-
-.btn-download:hover {
-  background-color: #19692c;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/*---------------------------------------------------- List ------------------------------------------------------*/
-ul, ol {
-  margin-bottom: 1rem;
-}
-
+/* Keterampilan Styling */
 ul {
   list-style-type: none;
   padding: 0;
 }
 
 ul li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
-
-/*---------------------------------------------------- Logo & Profile ------------------------------------------------------*/
-.logo {
-  margin-left: 20px;
-  border-radius: 100%;
-  height: 40px;
-  width: auto;
-  object-fit: cover;
-}
-
 .profile-img {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border: 3px solid #007bff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s;
-  object-fit: cover;
 }
 
-.profile-img:hover {
-  transform: scale(1.05);
+.btn-primary {
+  margin-top: 10px; /* Spasi antara gambar dan tombol */
+}
+ul li strong {
+  color: #007bff;
 }
 
-.navbar .profile-img {
-  width: 50px;
-  height: 50px;
-}
-
-/*---------------------------------------------------- About ------------------------------------------------------*/
-.about-content p {
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-/*---------------------------------------------------- Map ------------------------------------------------------*/
-.map-responsive {
-  margin-top: 20px;
-}
-
-/*---------------------------------------------------- Education ------------------------------------------------------*/
-.education-item {
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.education-indicator {
-  position: absolute;
-  top: 50%;
-  right: -20px;
-  transform: translateY(-50%);
-  width: 15px;
-  height: 15px;
+/* Profil Gambar dan Informasi */
+.profile-img {
   border-radius: 50%;
-  background-color: #007bff;
-  border: 3px solid #fff;
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  border: 3px solid #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/*---------------------------------------------------- Timeline ------------------------------------------------------*/
-.timeline {
-  position: relative;
-  width: 100%;
-  padding: 20px 0;
+/* Navbar Styling */
+header {
+  background: linear-gradient(135deg, #003366, #0099cc); /* Gradien biru laut ke biru muda */
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  width: 2px;
-  background-color: #007bff;
-  top: 20px;
-  bottom: 20px;
-  transform: translateX(-50%);
-  z-index: 1;
+.navbar {
+  padding: 0.5rem 1rem;
 }
 
-.timeline {
-  display: flex;
-  flex-direction: column;
-}
-.timeline-item {
-  position: relative;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s, transform 0.5s;
+.navbar-brand {
+  color: #fff; /* Warna teks putih untuk brand */
+  font-size: 1.5rem;
 }
 
-.timeline-item.show {
-  opacity: 1;
-  transform: translateY(0);
+.navbar-nav .nav-link {
+  color: #fff; /* Warna teks putih untuk link */
+  padding: 0.5rem 1rem;
 }
 
-.timeline-item {
-  width: 100%; /* Default to full width for stacking */
-  margin-bottom: 40px;
-  position: relative;
+.navbar-nav .nav-link:hover {
+  background-color: hsla(0, 0%, 56%, 0.925); /* Efek hover biru gelap */
+  border-radius: 0.25rem;
 }
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  text-align: right;
+/* Gaya Card dan Modal */
+.card {
+  margin-bottom: 1.5rem;
 }
 
-.timeline-item:nth-child(odd)::before {
-  right: -23px;
+.card-title {
+  font-size: 1.5rem;
 }
 
-.timeline::before {
-  left: 20px; /* Move timeline line to the left on smaller screens */
-  transform: translateX(0);
-  top: 0;
-  bottom: 0;
+.card-body {
+  padding: 1.25rem;
 }
 
-.timeline-item:nth-child(even) {
-  text-align: left;
-}
-
-/* Adjustments for mobile view */
-.timeline-item:nth-child(even)::before {
-  left: -23px;
-}
-
-.timeline::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.timeline-content {
-  padding: 1.5rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Style for the indicator circles */
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  top: 20px; /* Adjust vertical position */
-  left: 13px; /* Align with the timeline line */
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-}
-
-.timeline-date {
-  color: gray;
-}
-
-/*---------------------------------------------------- Skills ------------------------------------------------------*/
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.skill-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.skill-title {
-  margin-bottom: 10px;
-}
-
-.skill-description {
-  font-size: 0.95rem;
-}
-
-/*---------------------------------------------------- Fade In ------------------------------------------------------*/
-.fade-in {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-}
-
-/*---------------------------------------------------- Project ------------------------------------------------------*/
-.project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.project-item {
-  width: calc(50% - 20px);
-  margin: 10px;
-  box-sizing: border-box;
-}
-
-.project-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.project-card-body {
-  padding: 20px;
-}
-
-.project-title {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.project-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.project-image-container {
-  display: flex;
-  flex-wrap: wrap; /* Allow images to wrap to the next line */
-  gap: 10px; /* Add space between images */
-  justify-content: center; /* Center images when they stack */
-  margin-bottom: 10px;
-}
-
-.project-image-container img {
-  max-width: 100%; /* Ensure images don't exceed their container */
-  height: auto;
-}
-.project-description {
-  font-size: 0.95rem;
-}
-
-/*---------------------------------------------------- Certificate ------------------------------------------------------*/
-.certificate-section {
-  background-color: #f8f9fa;
-  padding: 40px 20px;
-}
-
-.certificate-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.certificate-card {
-  border-radius: 1rem;
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.certificate-card:hover {
-  transform: translateY(-0.25rem);
-  box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, 0.2);
-}
-
-.certificate-image-container {
-  height: 200px;
-  overflow: hidden;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 3.5rem;
-  color: #333;
-  font-weight: bold;
-}
-
-/*---------------------------------------------------- Modal ------------------------------------------------------*/
 .modal-content {
   border-radius: 0.5rem;
 }
 
 .modal-header {
   border-bottom: 1px solid #dee2e6;
-  padding: 1.5rem;
 }
 
 .modal-body img {
   max-width: 100%;
   height: auto;
-  border-radius: 4px;
 }
-
-/*---------------------------------------------------- Hero ------------------------------------------------------*/
-.hero {
-  background: linear-gradient(to right, #002147, #0056b3);
-  color: #fff;
-  padding: 90px 20px;
-  text-align: center;
-  margin: 1rem 0 3.5rem 0;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  margin-bottom: 30px;
-}
-
-/*---------------------------------------------------- Footer ------------------------------------------------------*/
-footer {
-  background: #343a40;
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.15);
-  color: #fff;
-  margin-top: auto;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-footer .social-links {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer .social-links li {
-  margin: 0 18px;
-}
-
-footer .social-links a {
-  color: #fff;
-  font-size: 2.2rem;
-  transition: color 0.3s, transform 0.2s;
-}
-
-footer .social-links a:hover {
-  color: #ced4da;
-  transform: translateY(-3px);
-}
-
-footer .copyright {
-  margin-top: 20px;
-  color: #adb5bd;
-}
-
-/*---------------------------------------------------- Floating WhatsApp ------------------------------------------------------*/
-.floating-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.floating-btn a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #25D366;
-  color: #fff;
-  padding: 14px 20px;
-  border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.floating-btn a:hover {
-  background-color: #128C7E;
-}
-
-/*---------------------------------------------------- Responsive ------------------------------------------------------*/
-@media (max-width: 767.98px) {
-  .navbar-nav {
-    text-align: center;
+   /* Style untuk tombol melayang */
+   .floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
   }
-
-  .nav-link {
-    padding: 10px 15px;
-    margin: 5px 0;
-  }
-
-  .navbar .profile-img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .hero {
-    padding: 70px 20px;
-  }
-
-  /* Adjust timeline for smaller screens */
-  .timeline::before {
-    left: 20px;
-    transform: translateX(0);
-  }
-}
-
-@media (max-width: 575.98px) {
   .floating-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366; /* Warna hijau WhatsApp */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
     font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
   }
+  .floating-btn a:hover {
+    background-color: #128C7E; /* Warna hijau WhatsApp gelap saat hover */
+  }
+  .floating-btn i {
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+  }
+footer {
+  background: linear-gradient(135deg, #003366, #0099cc);
+  color: #ffffff; /* White text color */
+  padding: 2rem 0; /* Add vertical padding */
+  text-align: center; /* Center align text */
+}
 
-  .project-item {
-    width: 100%;
+footer .container {
+  max-width: 960px; /* Adjust container width */
+  margin: 0 auto; /* Center align container */
+}
+
+footer .list-unstyled {
+  padding-left: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+footer .list-unstyled li {
+  display: inline; /* Display list items inline */
+  margin: 0 10px; /* Add horizontal margin */
+}
+
+footer .list-unstyled a {
+  color: #ffffff; /* White color for links */
+  font-size: 2rem; /* Adjust icon size */
+  transition: color 0.3s; /* Add smooth transition effect */
+}
+
+footer .list-unstyled a:hover {
+  color: #adb5bd; /* Change color on hover */
+}
+
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 767.98px) {
+  .navbar-nav .nav-link {
+    padding: 0.5rem;
   }
 }
