@@ -1,13 +1,15 @@
 /* CSS Variables */
 :root {
-    --primary-color: #6c5ce7;
-    --secondary-color: #a29bfe;
-    --accent-color: #ffc107;
-    --text-color: #666;
-    --text-dark: #333;
+    --primary-color: #4834d4;
+    --secondary-color: #686de0;
+    --accent-color: #ff9f43;
+    --text-color: #2d3436;
+    --text-dark: #2d3436;
     --white: #ffffff;
-    --light-bg: #f8f9fa;
-    --border-light: rgba(108, 92, 231, 0.1);
+    --light-bg: #f1f2f6;
+    --border-light: rgba(72, 52, 212, 0.1);
+    --gradient-primary: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+    --shadow-primary: 0 4px 15px rgba(72, 52, 212, 0.2);
 }
 
 /* Reset & Base Styles */
