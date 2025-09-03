@@ -177,12 +177,32 @@ section {
 }
 
 .nav-container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 1rem 20px;
+    padding: 1rem var(--space-sm);
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+    .nav-container {
+        max-width: 720px;
+        padding: 1rem var(--space-md);
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-container {
+        max-width: 960px;
+        padding: 1rem var(--space-lg);
+    }
+}
+
+@media (min-width: 1280px) {
+    .nav-container {
+        max-width: 1200px;
+    }
 }
 
 .nav-logo a {
@@ -956,8 +976,8 @@ section {
 }
 
 .achievement-item i {
-    color: var(--primary-color);
-    font-size: 1rem;
+    color: #28a745;
+    font-size: 0.9rem;
     margin-top: 0.2rem;
 }
 
